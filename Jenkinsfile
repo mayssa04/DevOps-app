@@ -112,6 +112,9 @@ pipeline {
    }
   }
   stage('Code Quality Analysis') {
+  when {
+   anyOf { branch 'master'}
+  }
   parallel {
     stage('PMD') {
      agent {
