@@ -138,7 +138,7 @@ pipeline {
      steps {
       sh ' mvn findbugs:findbugs'
       // using findbugs plugin
-      step([$class: 'findbugs' , pattern: '**/target/findbugsXml.xml'])
+      findbugs pattern: '**/target/findbugsXml.xml'
      }
     }
     stage('JavaDoc') {
