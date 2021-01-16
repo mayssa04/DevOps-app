@@ -112,7 +112,7 @@ pipeline {
    }
   }
   stage('Code Quality Analysis') {
-  // parallel {
+  parallel {
     stage('PMD') {
      agent {
       docker {
@@ -166,7 +166,7 @@ pipeline {
       sh " mvn sonar:sonar -Dsonar.host.url=$SONARQUBE_URL:$SONARQUBE_PORT"
      }
     }
-   //}
+   }
    post {
     always {
      // using warning next gen plugin
