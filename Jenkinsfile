@@ -227,7 +227,7 @@ pipeline {
   }
   stage('Deploy to Staging Servers') {
    when {
-    anyOf { branch 'master'; branch 'develop' }
+    anyOf { branch 'master'}
    }
    agent {
     docker {
