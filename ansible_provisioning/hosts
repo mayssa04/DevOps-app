@@ -5,7 +5,7 @@ localhost ansible_connection=local
 34.224.251.252:2222 ansible_port=2222 ansible_connection=ssh ansible_ssh_user=ansible #ansible_ssh_pass=ansible ansible_sudo_pass=ansible
 
 [production]
-ec2-3-236-191-118.us-east-1.compute-1.amazonaws.com ansible_port=22 ansible_connection=ssh ansible_ssh_user=ansible #ansible_ssh_pass=ansible ansible_sudo_pass=ansible
+ec2-3-236-191-118.compute-1.amazonaws.com ansible_port=22 ansible_connection=ssh ansible_ssh_user=ansible #ansible_ssh_pass=ansible ansible_sudo_pass=ansible
 
 [all:vars]
 ansible_connection=ssh
